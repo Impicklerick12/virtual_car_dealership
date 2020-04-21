@@ -1,7 +1,7 @@
 class Dealership
 
     def initialize
-        @name = "Testla Car Dealership"
+        @name = "Testla Motors"
         @address = "123 Silicone Valley Drv, Future Town"
         @phone = "13 FUTURE"
         @email = "elon@testladealership.com"
