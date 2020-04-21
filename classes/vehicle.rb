@@ -1,4 +1,5 @@
 Class Vehicle
+
     attr_reader :type, :features, :price    
 
     def initialize
@@ -8,11 +9,9 @@ Class Vehicle
     end
 
     def display_type
-
     end
 
     def display_features
-
     end
 
 end
