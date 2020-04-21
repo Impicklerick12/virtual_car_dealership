@@ -1,10 +1,10 @@
 
 #every vehicle has a type, model, features, price and colour
-Class Vehicle
+class Vehicle
 
     attr_reader :model, :price, :colour 
 
-    def initialize
+    def initialize(model, price, colour)
         @model = model
         # @features = features
         @price = price

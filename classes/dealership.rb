@@ -1,4 +1,4 @@
-Class Dealership
+class Dealership
 
     def initialize
         @name = "Testla Car Dealership"

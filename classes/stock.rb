@@ -1,6 +1,6 @@
 require_relative "vehicle.rb"
 
-Class ModelX < Vehicle
+class ModelX < Vehicle
 
     def initialize
         super #enter all parent class atributes here
@@ -8,7 +8,7 @@ Class ModelX < Vehicle
     
 end
 
-Class ModelM < Vehicle
+class ModelM < Vehicle
 
     def initialize
         super #enter all parent class atributes here
@@ -16,7 +16,7 @@ Class ModelM < Vehicle
     
 end
 
-Class Speedster < Vehicle
+class Speedster < Vehicle
 
     def initialize
         super #enter all parent class atributes here
@@ -24,7 +24,7 @@ Class Speedster < Vehicle
     
 end
 
-Class Cybertruck < Vehicle
+class Cybertruck < Vehicle
 
     def initialize
         super #enter all parent class atributes here
