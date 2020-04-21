@@ -1,3 +1,5 @@
+
+require_relative "vehicle.rb"
 Class Order
     
     def initialize
@@ -20,6 +22,9 @@ Class Order
     end
 
     def print_order
+        puts "Your order is:"
+        @order.each do |type, model|
+            puts "#{type."
     end
 
 end
