@@ -6,5 +6,13 @@ Class Vehicle
         @features = features
         @price = price
     end
-    
+
+    def display_type
+
+    end
+
+    def display_features
+
+    end
+
 end
