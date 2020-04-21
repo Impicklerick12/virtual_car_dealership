@@ -4,7 +4,7 @@
 
 by Tyler Hall
 
-Link to the repository: [https://github.com/Impicklerick12/virtual_car_dealership]
+Link to the repository - [https://github.com/Impicklerick12/virtual_car_dealership](https://github.com/Impicklerick12/virtual_car_dealership "Tyler's Github Repository")
 
 ## About the App
 
