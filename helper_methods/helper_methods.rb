@@ -1,3 +1,5 @@
+require "tty-prompt"
+
 def initialize_stock(stock)
     stock.add_item(Speedster.new) 
     stock.add_item(ModelM.new)
@@ -17,7 +19,8 @@ def get_name
 	user_name = gets.strip.capitalize
     clear
     
-	puts "Thank you #{user_name}, lets take a look at your menu options today"
+    puts "Thank you #{user_name}, press any key to continue to options"
+    gets
 	return user_name
 end
 
@@ -54,6 +57,45 @@ end
 # 		return continue
 	
 # 	end
+# end
+
+# def get_order(stock, order, user)
+
+#     choice = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:",  cycle: true, marker: '>', echo: false) do |menu|
+#         menu.choice('Model X', 1)
+#         menu.choice('Model M', 2)
+#         menu.choice('Speedster', 3)
+#         menu.choice('Cybertruck', 4)
+
+#         item = "Model X" if choice == 1
+#         item = "Model M" if choice == 2
+#         item = "Speedster" if choice == 3
+#         item = "Cybertruck" if choice == 4
+
+#         return "Thank you for stopping by Testla Motors! We hope to see you again soon" if choice == 0
+
+#         h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
+#         if h.keys.include?(item) == true
+#             # puts "How many would you like ? "
+#             count = 1
+#             order.add_vehicle(h[item],count)
+#         else
+#             puts "Sorry we do have that in stock currently"
+#         end
+
+#         #POTENTIAL TO ADD IN OPTIONAL EXTRAS HERE?
+#         puts "Would you like to add any optional extras? Y/N \n"
+#         yes_or_no = gets.chomp.downcase
+#         if yes_or_no == "n"
+#             # order.total_selling_price
+#             order.print_order
+#             return
+#         elsif yes_or_no == "y"
+#             #optional extras method?
+#         else
+#             puts "Sorry, that doesn't seem to be an option."
+#         end
+#     end
 # end
 
 def get_order(stock, order, user)
