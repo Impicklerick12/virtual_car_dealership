@@ -21,40 +21,40 @@ def get_name
 	return user_name
 end
 
-def menu
-	puts "[N]ew order"
-	puts "[E]xisitng order"
-	puts "[H]elp/Instructions"
-	puts "[Q]uit"
-end
+# def menu
+# 	puts "[N]ew order"
+# 	puts "[E]xisitng order"
+# 	puts "[H]elp/Instructions"
+# 	puts "[Q]uit"
+# end
 
-def validate_answer
-	puts "What would you like to do today?"
-	answer = gets.strip.downcase
+# def validate_answer
+# 	puts "What would you like to do today?"
+# 	answer = gets.strip.downcase
 	
 	
-	case answer
+# 	case answer
 			
-		when answer == "n"
-		get_order(stock, order, user)
+# 		when answer == "n"
+# 		get_order(stock, order, user)
 		
-		when answer == "e"
-			if user.order > 0
-				order.print_order
-			else
-				puts "Sorry, it looks like you have not placed an order yet."
-				menu
-			end
+# 		when answer == "e"
+# 			if user.order > 0
+# 				order.print_order
+# 			else
+# 				puts "Sorry, it looks like you have not placed an order yet."
+# 				menu
+# 			end
 		
-		when answer == "h"
+# 		when answer == "h"
 		
-		when answer == "q"
+# 		when answer == "q"
 		
-		contine = false
-		return continue
+# 		contine = false
+# 		return continue
 	
-	end
-end
+# 	end
+# end
 
 def get_order(stock, order, user)
     while 1
@@ -86,7 +86,6 @@ def get_order(stock, order, user)
         yes_or_no = gets.chomp.downcase
         if yes_or_no == "n"
             # order.total_selling_price
-			user.order(1)
             order.print_order
             return
         elsif yes_or_no == "y"
