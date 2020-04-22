@@ -39,7 +39,7 @@ Once the user has finished using the app, they may quit at any time, where a per
 
 ### Flow Chart
 
-![first draft flowchart](/docs/first_draft_flowchart.jpg "First Flowchart Draft")
+![first draft flowchart](docs/first_draft_flowchart.jpg "First Flowchart Draft")
 
 ### Timeline
 
