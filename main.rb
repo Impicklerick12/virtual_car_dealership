@@ -13,6 +13,7 @@ stock = Stock.new #stock hash gets created
 user = User.new(get_name) #user name gets created
 
 initialize_stock(stock)
+
 continue = true
     
     while continue
@@ -29,10 +30,10 @@ continue = true
             #new order
             when 1
                 get_order(stock, order, user)
-
+                
             #existing order
             when 2
-                if user.order == 0
+                if user.order
                     puts "Sorry, you haven't placed an order yet."
                     return
                 else

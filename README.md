@@ -36,11 +36,19 @@ Once the user has finished using the app, they may quit at any time, where a per
 
 ## Planning Process and Design Implementation
 
+
 ### Flow Chart
+
+![first draft flowchart](./docs/first_draft_flowchart.jpg "First Flowchart Draft")
 
 ### Timeline
 
 ### Implementation Plan (Trello)
+
+![trello day 1](.docs/trello_board_day_1.png "Trello Board Day 1")
+
+![trello day 2](.docs/trello_board_day_2.png "Trello Board Day 2")
+
 
 ### Testing
 

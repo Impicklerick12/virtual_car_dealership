@@ -1,10 +1,9 @@
 require "tty-prompt"
 
 def initialize_stock(stock)
-    stock.add_item(Speedster.new) 
-    stock.add_item(ModelM.new)
-    stock.add_item(ModelX.new)
-    stock.add_item(Cybertruck.new)
+
+    stock.add_item(Speedster.new).add_item(ModelM.new).add_item(ModelX.new).add_item(Cybertruck.new)
+
 end
 
 def clear
@@ -24,48 +23,26 @@ def get_name
 	return user_name
 end
 
-# def menu
-# 	puts "[N]ew order"
-# 	puts "[E]xisitng order"
-# 	puts "[H]elp/Instructions"
-# 	puts "[Q]uit"
-# end
-
-# def validate_answer
-# 	puts "What would you like to do today?"
-# 	answer = gets.strip.downcase
-	
-	
-# 	case answer
-			
-# 		when answer == "n"
-# 		get_order(stock, order, user)
-		
-# 		when answer == "e"
-# 			if user.order > 0
-# 				order.print_order
-# 			else
-# 				puts "Sorry, it looks like you have not placed an order yet."
-# 				menu
-# 			end
-		
-# 		when answer == "h"
-		
-# 		when answer == "q"
-		
-# 		contine = false
-# 		return continue
-	
-# 	end
-# end
-
 # def get_order(stock, order, user)
 
-#     choice = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:",  cycle: true, marker: '>', echo: false) do |menu|
+#     model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:",  cycle: true, marker: '>', echo: false) do |menu|
 #         menu.choice('Model X', 1)
 #         menu.choice('Model M', 2)
 #         menu.choice('Speedster', 3)
 #         menu.choice('Cybertruck', 4)
+
+#         case model
+
+#         when 1
+
+#         when 2
+
+#         when 3
+
+#         when 4
+
+#         end
+
 
 #         item = "Model X" if choice == 1
 #         item = "Model M" if choice == 2
