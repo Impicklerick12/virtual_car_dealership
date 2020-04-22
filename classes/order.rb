@@ -7,7 +7,6 @@ class Order
     def initialize
         #order hash - vehicle object as key, model as value
         @order = Hash.new(0)
-        # @order = {["speedster", 2000000, "Red"]}
     end
 
     #Add a vehicle to order hash when the user chooses a model and colour
@@ -30,9 +29,9 @@ class Order
     def print_order
         puts "Your order is:"
         @order.each do |vehicle, quantity|
-            puts "Testla #{vehicle.model} ----- Colour: #{vehicle.colour} ------ Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
+            puts "Testla #{vehicle.model} ----- Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
         end
-        puts "Total is $#{total_price}"
+        puts "Total is $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
     end
 
 end

@@ -3,10 +3,10 @@ require_relative "./classes/order.rb"
 
 #Main Application
 def initialize_stock(stock)
-    stock.add_item(Speedster.new("Black")) 
-    stock.add_item(ModelM.new("Black"))
-    stock.add_item(ModelX.new("Black"))
-    stock.add_item(Cybertruck.new("Black"))
+    stock.add_item(Speedster.new) 
+    stock.add_item(ModelM.new)
+    stock.add_item(ModelX.new)
+    stock.add_item(Cybertruck.new)
 end
 
 
@@ -18,7 +18,8 @@ def get_order(stock, order)
     while 1
         system("clear")
         puts stock
-        h = {"Model X"=> ModelX.new("Black"), "Model M" => ModelM.new("Black"), "Speedster" => Speedster.new("Black"), "Cybertruck" => Cybertruck.new("Black")}
+        h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
+        puts "\n"
         puts "Please enter your choice : 1 for Model X , 2 for Model M , 3 for Speedster, 4 for Cybertruck, 0 to quit"
         item = gets.chomp.to_i
         
@@ -34,18 +35,22 @@ def get_order(stock, order)
             # puts "How many would you like ? "
             count = 1
             #CODE GETTING STUCK AT THIS POINT. `add_item': wrong number of arguments (given 2, expected 1) (ArgumentError)
-            stock.add_item(h[item],count)
+            order.add_vehicle(h[item],count)
         else
-            puts "Sorry we do not stock that"
+            puts "Sorry we do have that in stock currently"
         end
 
         #POTENTIAL TO ADD IN OPTIONAL EXTRAS HERE?
-        puts "Would you like to order anything else ? (y)es or (n)o \n"
-        yes_or_no = gets.chomp
+        puts "Would you like to add any optional extras? Y/N \n"
+        yes_or_no = gets.chomp.downcase
         if yes_or_no == "n"
             # order.total_selling_price
             order.print_order
             return
+        elsif yes_or_no == "y"
+            #optional extras method?
+        else
+            puts "Sorry, that doesn't seem to be an option."
         end
 
     end # end of that while 1 

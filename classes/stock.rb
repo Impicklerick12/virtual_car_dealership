@@ -1,37 +1,37 @@
 require_relative "vehicle.rb"
 
 class ModelX < Vehicle
-    attr_reader :colour
-    def initialize(colour)
+    # attr_reader :colour
+    def initialize()
         super("Model X", 84990)
-        @colour = colour
+        # @colour = colour
     end
     
 end
 
 class ModelM < Vehicle
-    attr_reader :colour
-    def initialize(colour)
+    # attr_reader :colour
+    def initialize()
         super("Model M", 79990)
-        @colour = colour
+        # @colour = colour
     end
     
 end
 
 class Speedster < Vehicle
-    attr_reader :colour
-    def initialize(colour)
+    # attr_reader :colour
+    def initialize()
         super("Speedster", 200000)
-        @colour = colour
+        # @colour = colour
     end
     
 end
 
 class Cybertruck < Vehicle
-    attr_reader :colour
-    def initialize(colour)
+    # attr_reader :colour
+    def initialize()
         super("Cybertruck", 39990)
-        @colour = colour
+        # @colour = colour
     end
 
 end
