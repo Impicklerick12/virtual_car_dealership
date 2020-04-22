@@ -7,6 +7,7 @@ class Order
     def initialize
         #order hash - vehicle object as key, model as value
         @order = Hash.new(0)
+        # @order = {["speedster", 2000000, "Red"]}
     end
 
     #Add a vehicle to order hash when the user chooses a model and colour
@@ -16,6 +17,7 @@ class Order
 
     def add_colour
         #STILL NEEED TO WORK ON THIS!
+		
     end
 
     def total_price
