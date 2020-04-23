@@ -39,7 +39,7 @@ class Cybertruck < Vehicle
 end
 
 class Stock #shows the stock vehicles and add new vehicles to the stock
-    
+
     def initialize
         @menu = Hash.new(0) #vehicle.model = key, vehicle = value?
     end

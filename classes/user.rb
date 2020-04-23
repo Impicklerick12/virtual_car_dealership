@@ -16,7 +16,7 @@ class User
 		begin
 			
         @user_name = user_name
-        @order = nil
+        @order = 0
 			
 		rescue InvalidNameError => e
 			puts "Error: #{e.message}"
@@ -26,5 +26,5 @@ class User
 	def name
 		return @user_name
 	end
-	
+
 end

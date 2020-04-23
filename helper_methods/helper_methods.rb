@@ -23,6 +23,12 @@ def get_name
 	return user_name
 end
 
+def return_to_menu
+    puts "Press any key to return to the menu"
+    gets
+    clear
+end
+
 # def get_order(stock, order, user)
 
 #     model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:",  cycle: true, marker: '>', echo: false) do |menu|
@@ -77,26 +83,25 @@ end
 
 def get_order(stock, order, user)
     # while 1
-
         item = stock.select
 
         h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
-        #case statement?
-        # item = "Model X" if item == 1
-        # item = "Model M" if item == 2
-        # item = "Speedster" if item == 3
-        # item = "Cybertruck" if item == 4
+        # # case statement?
+        # # item = "Model X" if item == 1
+        # # item = "Model M" if item == 2
+        # # item = "Speedster" if item == 3
+        # # item = "Cybertruck" if item == 4
 
-        if h.keys.include?(item) == true
+        # if h.keys.include?(item) == true
             order.add_vehicle(h[item],1)
-        else
-            puts "Sorry we do have that in stock currently"
-        end
+        # else
+        #     puts "Sorry we do have that in stock currently"
+        # end
 
         stock.extras
 
 
-        order.print_order
+        # order.print_order
         #POTENTIAL TO ADD IN OPTIONAL EXTRAS HERE?
         # puts "Would you like to add any optional extras? Y/N \n"
         # yes_or_no = gets.chomp.downcase

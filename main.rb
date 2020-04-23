@@ -30,14 +30,17 @@ continue = true
             #new order
             when 1
                 get_order(stock, order, user)
-                
+                order.print_order
+                return_to_menu
+                user.order += 1
             #existing order
             when 2
-                if user.order
-                    puts "Sorry, you haven't placed an order yet."
-                    return
+                if user.order == 0
+                    puts "Sorry #{user.name}, it looks like you haven't placed an order yet."
+                    return_to_menu
                 else
                     order.print_order
+                    return_to_menu
                 end
 
             #Info/help
