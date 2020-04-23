@@ -7,7 +7,9 @@ require_relative "./helper_methods/helper_methods.rb"
 
 #Main Application
 def main
-    
+
+#TESTLA BANNER HERE
+dealership = Dealership.new 
 order = Order.new #order hash gets created
 stock = Stock.new #stock hash gets created
 user = User.new(get_name) #user name gets created
@@ -45,7 +47,7 @@ continue = true
 
             #Info/help
             when 3
-
+                help(dealership)
             #exit
             when 4
                 continue = false

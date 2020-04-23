@@ -3,18 +3,18 @@ require "tty-prompt"
 #every vehicle has a type, model, features, price and colour
 class Vehicle
 
-    attr_accessor :model, :price
+    attr_accessor :model, :price, :features, :colour
 
-    def initialize(model, price)
+    def initialize(model, price, features)
         @model = model
-        # @features = features
         @price = price
-        # @colour = colour
+        @features = features
+        @colour = colour
     end
 
     def display_model
         puts "Vehicle Model: #{@model}"
-        puts "Price: $#{@price}"
+        puts "Price: $#{@price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
     end
 
     # def add_model(model)
@@ -31,43 +31,48 @@ class Vehicle
     #         @models.each { |model| return model if vehicle.model == selection }
     # end
 
-    # def display_features
-    # end
+    def display_features
+        puts
+        puts "Features:"
+        @features.each do |feature|
+            puts "- #{feature}"
+        end
+    end
 
 end
 
 class ModelX < Vehicle
-    # attr_reader :colour
+    attr_reader :colour
     def initialize()
-        super("Model X", 84990)
-        # @colour = colour
+        super("Model X", 84990, ["Super Fast", "Looks awesome"])
+        @colour = colour
     end
     
 end
 
 class ModelM < Vehicle
-    # attr_reader :colour
+    attr_reader :colour
     def initialize()
-        super("Model M", 79990)
-        # @colour = colour
+        super("Model M", 79990, ["Super Fast", "Looks awesome"])
+        @colour = colour
     end
     
 end
 
 class Speedster < Vehicle
-    # attr_reader :colour
+    attr_reader :colour
     def initialize()
-        super("Speedster", 200000)
-        # @colour = colour
+        super("Speedster", 200000, ["Super Fast", "Looks awesome"])
+        @colour = colour
     end
     
 end
 
 class Cybertruck < Vehicle
-    # attr_reader :colour
+    attr_reader :colour
     def initialize()
-        super("Cybertruck", 39990)
-        # @colour = colour
+        super("Cybertruck", 39990, ["Super Fast", "Looks awesome"])
+        @colour = colour
     end
 
 end

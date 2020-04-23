@@ -38,8 +38,8 @@ class Order
         puts
         puts "=" * 55
         puts
-        @order.each do |vehicle, quantity|
-            puts "Testla #{vehicle.model} ----- Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
+        @order.each do |vehicle, quantity, colour|
+            puts "Testla #{vehicle.model} ----- Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ----- Colour: #{vehicle.colour} ---- Quantity: #{quantity}"
         end
         puts
         puts "Total: $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"

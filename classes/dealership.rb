@@ -4,7 +4,7 @@ class Dealership
         @name = "Testla Motors"
         @address = "123 Silicone Valley Drv, Future Town"
         @phone = "13 FUTURE"
-        @email = "elon@testladealership.com"
+        @email = "elon@testlamotors.com"
         @about = "" #information about the dealership
     end
 

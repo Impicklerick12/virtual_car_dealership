@@ -3,42 +3,6 @@ require_relative "vehicle.rb"
 require_relative "user.rb"
 require_relative "../helper_methods/helper_methods.rb"
 
-# class ModelX < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Model X", 84990)
-#         # @colour = colour
-#     end
-    
-# end
-
-# class ModelM < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Model M", 79990)
-#         # @colour = colour
-#     end
-    
-# end
-
-# class Speedster < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Speedster", 200000)
-#         # @colour = colour
-#     end
-    
-# end
-
-# class Cybertruck < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Cybertruck", 39990)
-#         # @colour = colour
-#     end
-
-# end
-
 class Stock #shows the stock vehicles and add new vehicles to the stock
 
     def initialize
@@ -51,10 +15,17 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
     end
 
     def display_model(vehicle)
+        # puts "Testla Model: #{vehicle.model}"
+        # puts "Price: $#{vehicle.price}"
+        vehicle.display_model
+        vehicle.display_features
         puts
-        puts "Testla Model: #{vehicle.model}"
-        puts "Price: $#{vehicle.price}"
-        puts
+    end
+
+    def display_stock
+        @menu.each do |model, price|
+            puts model
+        end
     end
 
     def select
@@ -68,26 +39,9 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
         return model
     end
 
-    # def extras
-
-    #     puts "Would you like to add any optional extras? Y/N \n"
-    #     yes_or_no = gets.chomp.downcase
-    #     clear
-
-    #     if yes_or_no == "n"
-    #         return
-    #     elsif yes_or_no == "y"
-    #         extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
-    #             menu.choice('Carbon Wheels', 1)
-    #             menu.choice('Oak Wood Interior', 2)
-    #             menu.choice('Self-Driving Capability', 3)
-    #             menu.choice('Ludicrously Fast Mode', 4)
-    #         end
-    #         return extras
-    #     else
-    #         puts "Sorry, that doesn't seem to be an option."
-    #     end
-    # end
+    def add_colour(colour)
+        @menu[vehicle.colour] = colour
+    end
 end
 
 # stock = Stock.new
