@@ -7,7 +7,7 @@ require_relative "./helper_methods/helper_methods.rb"
 
 #Main Application
 def main
-
+main_banner
 #TESTLA BANNER HERE
 dealership = Dealership.new 
 order = Order.new #order hash gets created
@@ -17,7 +17,7 @@ user = User.new(get_name) #user name gets created
 initialize_stock(stock)
 
 continue = true
-    
+
     while continue
         
         clear #NOT WORKING
