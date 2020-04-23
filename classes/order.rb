@@ -36,7 +36,7 @@ class Order
         clear
         puts "Your Testla order confirmation"
         puts
-        puts "*" * 55
+        puts "=" * 55
         puts
         @order.each do |vehicle, quantity|
             puts "Testla #{vehicle.model} ----- Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
@@ -44,7 +44,7 @@ class Order
         puts
         puts "Total: $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
         puts
-        puts "*" * 55
+        puts "=" * 55
         puts
     end
 

@@ -29,6 +29,27 @@ def return_to_menu
     clear
 end
 
+def extras
+
+    puts "Would you like to add any optional extras? Y/N \n"
+    yes_or_no = gets.chomp.downcase
+    clear
+
+    if yes_or_no == "n"
+        return
+    elsif yes_or_no == "y"
+        extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
+            menu.choice('Carbon Wheels', 1)
+            menu.choice('Oak Wood Interior', 2)
+            menu.choice('Self-Driving Capability', 3)
+            menu.choice('Ludicrously Fast Mode', 4)
+        end
+        return extras
+    else
+        puts "Sorry, that doesn't seem to be an option."
+    end
+end
+
 # def get_order(stock, order, user)
 
 #     model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:",  cycle: true, marker: '>', echo: false) do |menu|
@@ -81,7 +102,7 @@ end
 #     end
 # end
 
-def get_order(stock, order, user)
+def get_order(stock, order, vehicle)
     # while 1
         item = stock.select
 
@@ -93,12 +114,16 @@ def get_order(stock, order, user)
         # # item = "Cybertruck" if item == 4
 
         # if h.keys.include?(item) == true
-            order.add_vehicle(h[item],1)
+        order.add_vehicle(h[item],1)
+        #ADD IN TESTLA MOTOS BANNER HERE!
+        stock.display_model(h[item])
         # else
         #     puts "Sorry we do have that in stock currently"
         # end
 
-        stock.extras
+
+
+        extras
 
 
         # order.print_order

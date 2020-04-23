@@ -12,10 +12,10 @@ class Vehicle
         # @colour = colour
     end
 
-    # def display_model
-    #     puts "Vehicle Model: #{@model}"
-    #     puts "Price: $#{@price}"
-    # end
+    def display_model
+        puts "Vehicle Model: #{@model}"
+        puts "Price: $#{@price}"
+    end
 
     # def add_model(model)
     #     @model << model
@@ -36,38 +36,38 @@ class Vehicle
 
 end
 
-# class ModelX < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Model X", 84990)
-#         # @colour = colour
-#     end
+class ModelX < Vehicle
+    # attr_reader :colour
+    def initialize()
+        super("Model X", 84990)
+        # @colour = colour
+    end
     
-# end
+end
 
-# class ModelM < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Model M", 79990)
-#         # @colour = colour
-#     end
+class ModelM < Vehicle
+    # attr_reader :colour
+    def initialize()
+        super("Model M", 79990)
+        # @colour = colour
+    end
     
-# end
+end
 
-# class Speedster < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Speedster", 200000)
-#         # @colour = colour
-#     end
+class Speedster < Vehicle
+    # attr_reader :colour
+    def initialize()
+        super("Speedster", 200000)
+        # @colour = colour
+    end
     
-# end
+end
 
-# class Cybertruck < Vehicle
-#     # attr_reader :colour
-#     def initialize()
-#         super("Cybertruck", 39990)
-#         # @colour = colour
-#     end
+class Cybertruck < Vehicle
+    # attr_reader :colour
+    def initialize()
+        super("Cybertruck", 39990)
+        # @colour = colour
+    end
 
-# end
+end
