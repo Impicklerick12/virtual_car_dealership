@@ -41,6 +41,8 @@ Once the user has finished using the app, they may quit at any time, where a per
 
 ![first draft flowchart](docs/first_draft_flowchart.JPG "First Flowchart Draft")
 
+![second flowchart](docs/flowchart_1.jpeg "Second Flowchart Draft")
+
 ### Timeline
 
 ### Implementation Plan (Trello)
