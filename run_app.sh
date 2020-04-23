@@ -1,7 +1,15 @@
-#!/bin/bash
+echo "Welcome to the Testla Motors Virtual Dealership!"
 
-# install dependencies from Gemfile
+echo "Lets begin the install now"
+
+git clone "https://github.com/Impicklerick12/virtual_car_dealership"
+
+cd directory
+
+echo "Time to ensure all required gems are installed"
+
 bundle install
 
-# run application
+echo "All gems have been installed, running application for the first time now"
+
 ruby main.rb
