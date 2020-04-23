@@ -1,4 +1,6 @@
+require "tty-prompt"
 require_relative "vehicle.rb"
+require_relative "user.rb"
 
 class ModelX < Vehicle
     # attr_reader :colour
@@ -47,13 +49,32 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
         return self
     end
 
-    def to_s
-        stock_string = "Our current stock: \n"
-        stock_string += "\n"
-        @menu.each do |name, model|
-            stock_string += "#{name} ---- $#{model.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} \n"
+    def select
+        model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:") do |menu|
+            menu.choice("Model X")
+            menu.choice("Model M")
+            menu.choice("Speedster")
+            menu.choice("Cybertruck")
         end
-        return stock_string.chomp
+        return model
+    end
+
+    def extras
+        puts "Would you like to add any optional extras? Y/N \n"
+        yes_or_no = gets.chomp.downcase
+        if yes_or_no == "n"
+            return
+        elsif yes_or_no == "y"
+            extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
+                menu.choice('Carbon Wheels', 1)
+                menu.choice('Oak Wood Interior', 2)
+                menu.choice('Self-Driving Capability', 3)
+                menu.choice('Ludicrously Fast Mode', 4)
+            end
+            return extras
+        else
+            puts "Sorry, that doesn't seem to be an option."
+        end
     end
 end
 

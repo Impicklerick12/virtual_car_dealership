@@ -18,7 +18,7 @@ continue = true
     
     while continue
         
-        clear
+        clear #NOT WORKING
         selection = TTY::Prompt.new.select("What would you like to do today:",  cycle: true, marker: '>', echo: false) do |menu|
             menu.choice('Start a new order', 1)
             menu.choice('View an existing order', 2)
@@ -49,8 +49,6 @@ continue = true
                 return continue
             end
         end
-        # validate_answer
-        # get_order(stock,order,user)
         
     end
     

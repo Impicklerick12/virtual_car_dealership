@@ -4,7 +4,7 @@ end
 
 def validate_name(user_name)
 	
-	raise InvalidNameError, "Name must not be empty" if user_name == ""
+	raise InvalidNameError, "Name must not be empty" if user_name == " "
 	user_name
 	
 end

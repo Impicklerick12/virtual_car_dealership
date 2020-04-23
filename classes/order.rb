@@ -1,4 +1,4 @@
-
+require_relative "../helper_methods/helper_methods.rb"
 require_relative "vehicle.rb"
 require_relative "stock.rb"
 
@@ -10,7 +10,7 @@ class Order
         # @order = {["speedster", 2000000, "Red"]}
     end
 
-    #Add a vehicle to order hash when the user chooses a model and colour
+    #Add a vehicle to order hash when the user chooses a model
     def add_vehicle(vehicle, quantity) #type is an object and not a string
         @order[vehicle] += quantity 
     end
@@ -18,6 +18,10 @@ class Order
     def add_colour
         #STILL NEEED TO WORK ON THIS!
 		
+    end
+
+    def add_extras
+
     end
 
     def total_price
@@ -29,6 +33,7 @@ class Order
     end
 
     def print_order
+        clear
         puts "Your order is:"
         @order.each do |vehicle, quantity|
             puts "Testla #{vehicle.model} ----- Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
