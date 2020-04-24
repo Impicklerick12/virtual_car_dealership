@@ -7,11 +7,10 @@ class Order
     def initialize
         #order hash - vehicle object as key, model as value
         @order = Hash.new(0)
-        # @order = {["speedster", 2000000, "Red"]}
     end
 
     #Add a vehicle to order hash when the user chooses a model
-    def add_vehicle(vehicle, quantity) #type is an object and not a string
+    def add_vehicle(vehicle, quantity)
         @order[vehicle] += quantity 
     end
 
@@ -29,6 +28,7 @@ class Order
 
     def print_order
         clear
+        #TESTLA BANNER HERE
         puts "Your Testla order confirmation"
         puts
         puts "=" * 55
@@ -38,10 +38,10 @@ class Order
             puts
             puts "Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
             puts
-            puts "Total: $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-            puts
             puts "-" * 55
         end
+        puts
+        puts "Total: $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
         puts
     end
 

@@ -1,11 +1,13 @@
+require "faker"
+
 class Dealership
 
     def initialize
         @name = "Testla Motors"
-        @address = "123 Silicone Valley Drv, Future Town"
-        @phone = "13 FUTURE"
+        @address = Faker::Address.full_address
+        @phone = Faker::PhoneNumber.phone_number_with_country_code
         @email = "elon@testlamotors.com"
-        @about = "" #information about the dealership
+        # @about = "" #information about the dealership
     end
 
     def display_info

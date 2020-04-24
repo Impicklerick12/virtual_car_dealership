@@ -13,20 +13,6 @@ def clear
     return system("clear")
 end
 
-def get_name
-    puts "Welcome to Testla Motors!" 
-	puts "To get going, please enter your name:"
-	user_name = gets.strip.capitalize
-    clear
-    if user_name != ""
-        puts "Thank you #{user_name}, press enter to continue to options"
-        gets
-        return user_name
-    else user_name == ""
-        puts "Sorry, it looks like you didn't enter anything."
-    end
-end
-
 def help(dealership)
     clear
     #BANNER HERE
@@ -54,10 +40,10 @@ def extras
     else yes_no == "Yes"
 
         extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
-            menu.choice('Carbon Wheels', 1)
-            menu.choice('Oak Wood Interior', 2)
-            menu.choice('Self-Driving Capability', 3)
-            menu.choice('Ludicrously Fast Mode', 4)
+            menu.choice('Carbon Wheels')
+            menu.choice('Oak Wood Interior')
+            menu.choice('Self-Driving Capability')
+            menu.choice('Ludicrously Fast Mode')
         end
         return extras
 
@@ -84,8 +70,10 @@ def get_order(stock, order, vehicle)
     #ADD IN TESTLA MOTORS BANNER HERE!
     stock.display_model(h[item])
     (h[item]).add_colour(add_colour)
-    extras
 
     order.add_vehicle(h[item],1)
+
+    e = {"Carbon Wheels" => 1500, "Oak Wood Interior" => 1500, "Self-Driving Capability" => 7000, "Luicrously Fast Mode" => 3000}
+    extras
 
 end
