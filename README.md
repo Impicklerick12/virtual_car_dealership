@@ -8,6 +8,10 @@ by Tyler Hall
 
 Link to the repository - [https://github.com/Impicklerick12/virtual_car_dealership](https://github.com/Impicklerick12/virtual_car_dealership "Tyler's Github Repository")
 
+Files:
+
+* [https://github.com/Impicklerick12/virtual_car_dealership/blob/master/development_log.md](https://github.com/Impicklerick12/virtual_car_dealership/blob/master/development_log.md "Development Log")
+
 ## About the App
 
 ### Description
