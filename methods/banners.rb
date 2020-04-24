@@ -1,19 +1,27 @@
-require_relative "helper_methods.rb"
 require "tty-progressbar"
+require "colorize"
+require_relative "helper_methods.rb"
 
 HEADER_LINE = "---------------------------------------------------------------"
 HEADER_LENGTH = HEADER_LINE.length
 
 def main_banner
     clear
-    puts "88888888888 8888888888 .d8888b. 88888888888 888             d8888 "
-    puts "    888     888       d88P  Y88b    888     888            d88888 "
-    puts "    888     888       Y88b.         888     888           d88P888 "
-    puts "    888     8888888    Y888b.       888     888          d88P 888 "
-    puts "    888     888           Y88b.     888     888         d88P  888 "
-    puts "    888     888             888     888     888        d88P   888 "
-    puts "    888     888       Y88b  d88P    888     888       d8888888888 "
-    puts "    888     8888888888  Y8888P      888     88888888 d88P     888 "
+    puts "88888888888 8888888888 .d8888b. 88888888888 888             d8888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     888       d88P  Y88b    888     888            d88888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     888       Y88b.         888     888           d88P888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     8888888    Y888b.       888     888          d88P 888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     888           Y88b.     888     888         d88P  888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     888             888     888     888        d88P   888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     888       Y88b  d88P    888     888       d8888888888 ".colorize(:red)
+    sleep(0.3)
+    puts "    888     8888888888  Y8888P      888     88888888 d88P     888 ".colorize(:red)
     puts
     sleep(1)
     puts "Welcome to Testla Motors!".center(HEADER_LENGTH)
@@ -35,9 +43,9 @@ end
 def main_menu_header
     puts HEADER_LINE
     puts
-    puts "___ ____ ____ ___ _    ____" .center(HEADER_LENGTH)
-    puts "  |  |___ [__   |  |    |__| ".center(HEADER_LENGTH)
-    puts "  |  |___ ___]  |  |___ |  | ".center(HEADER_LENGTH)
+    puts "___ ____ ____ ___ _    ____" .center(HEADER_LENGTH).colorize(:red)
+    puts "  |  |___ [__   |  |    |__| ".center(HEADER_LENGTH).colorize(:red)
+    puts "  |  |___ ___]  |  |___ |  | ".center(HEADER_LENGTH).colorize(:red)
     puts
     puts "Welcome to Testla Motors!".center(HEADER_LENGTH)
     puts

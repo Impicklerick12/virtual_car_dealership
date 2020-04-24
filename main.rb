@@ -54,7 +54,7 @@ continue = true
         
         clear
         main_menu_header
-        
+
         selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false) do |menu|
             menu.choice('Start a new order', 1)
             menu.choice('View an existing order', 2)
