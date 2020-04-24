@@ -29,9 +29,18 @@ def main_banner
     sleep(1)
 end
 
+# pastel = Pastel.new
+# red = pastel.on_red(" ")
+# black = pastel.on_black(" ")
+
 def progress_bar
     clear
-    puts "Please wait while we process your order."
+    puts
+    puts
+    puts
+    puts
+    puts "       Please wait while we process your order."
+    puts
     puts
     bar = TTY::ProgressBar.new("[:bar]", total: 50)
     50.times do

@@ -53,7 +53,6 @@ continue = true
     while continue
         
         clear
-        main_menu_header
 
         selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false) do |menu|
             menu.choice('Start a new order', 1)
@@ -65,6 +64,7 @@ continue = true
 
             #new order
             when 1
+                main_menu_header
                 get_order(stock, order, user)
                 progress_bar
                 order.print_order
@@ -72,6 +72,7 @@ continue = true
                 user.order += 1
             #existing order
             when 2
+                main_menu_header
                 if user.order == 0
                     puts "Sorry #{user.name}, it looks like you haven't placed an order yet."
                     return_to_menu
@@ -82,6 +83,7 @@ continue = true
 
             #Info/help
             when 3
+                main_menu_header
                 help(dealership)
             #exit
             when 4

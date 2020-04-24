@@ -41,6 +41,7 @@ PLATFORMS
 DEPENDENCIES
   colorize (~> 0.8.1)
   faker (~> 2.11)
+  pastel (~> 0.7.3)
   test-unit (~> 3.3)
   tty-progressbar (~> 0.17.0)
   tty-prompt (~> 0.21.0)

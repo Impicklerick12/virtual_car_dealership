@@ -15,3 +15,5 @@ gem "test-unit", "~> 3.3"
 gem "faker", "~> 2.11"
 
 gem "tty-progressbar", "~> 0.17.0"
+
+gem "pastel", "~> 0.7.3"

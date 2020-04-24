@@ -2,6 +2,7 @@ require "tty-prompt"
 require_relative "../classes/vehicle.rb"
 require_relative "../classes/dealership.rb"
 require_relative "../classes/stock.rb"
+require_relative "banners.rb"
 
 # def initialize_stock(stock)
 
@@ -15,9 +16,12 @@ end
 
 def help(dealership)
     clear
-    #BANNER HERE
-    puts "Testla Motors"
+    main_menu_header
+    puts
     puts dealership.contact_info
+    puts
+    puts "Testla aims to provide solutions for a modern world. \nTo navigate around the app, please use your arrow keys and the enter key to select the options you require. \nIf you have any issues, please don't hestitate to contact us via our above contact information."
+    puts
     return_to_menu
 end
 

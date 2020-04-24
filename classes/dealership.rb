@@ -1,4 +1,5 @@
 require "faker"
+require_relative "../methods/banners.rb"
 
 class Dealership
 
@@ -14,9 +15,9 @@ class Dealership
     end
 
     def contact_info
-        puts "Adress: #{@address}"
-        puts "Phone Number: #{@phone}"
-        puts "Email: #{@email}"
+        puts "Adress: ".colorize(:red) + "#{@address}"
+        puts "Phone Number: ".colorize(:red) + "#{@phone}"
+        puts "Email: ".colorize(:red) + "#{@email}"
     end
 
 end
