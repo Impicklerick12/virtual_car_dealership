@@ -26,7 +26,7 @@ def main_banner
     sleep(1)
     puts "Welcome to Testla Motors!".center(HEADER_LENGTH)
     puts
-    sleep(1)
+    sleep(2)
 end
 
 # pastel = Pastel.new
@@ -39,7 +39,7 @@ def progress_bar
     puts
     puts
     puts
-    puts "       Please wait while we process your order."
+    puts "     Please wait while we process your order."
     puts
     puts
     bar = TTY::ProgressBar.new("[:bar]", total: 50)
@@ -50,6 +50,7 @@ def progress_bar
 end
 
 def main_menu_header
+    clear
     puts HEADER_LINE
     puts
     puts "___ ____ ____ ___ _    ____" .center(HEADER_LENGTH).colorize(:red)

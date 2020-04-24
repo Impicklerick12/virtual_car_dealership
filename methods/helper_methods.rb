@@ -27,7 +27,7 @@ end
 
 def return_to_menu
     puts "Press enter to return to the menu"
-    gets
+    $stdin.gets
     clear
 end
 

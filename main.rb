@@ -9,90 +9,90 @@ require_relative "./methods/banners.rb"
 
 #Main Application
 def main
-main_banner
-#TESTLA BANNER HERE
 
-dealership = Dealership.new 
-order = Order.new #order hash gets created
-stock = Stock.new #stock hash gets created
-# user = User.new(get_name) #user name gets created
+    dealership = Dealership.new 
+    order = Order.new #order hash gets created
+    stock = Stock.new #stock hash gets created
 
-# initialize_stock(stock)
+    main_banner
 
-# Enter Cat guest details
-# puts "Welcome to Testla Motors!" 
-puts "To get going, please enter your name:"
+    # initialize_stock(stock)
 
-name_attempts = 0
-while name_attempts < 3
-    user_name = gets.strip.capitalize
+    user_name = (ARGV.length > 0) && ARGV[0]
+    if !user_name
+        puts "To get going, please enter your name:"
 
-    if user_name != ""
-        clear
-        break
-    else
-        name_attempts += 1
-        if name_attempts == 3
-            clear
-            user_name = Faker::Name.first_name
-            break
-        else
-            puts "Sorry, it looks like you didn't enter anything."
-        end
-    end
-end
+        name_attempts = 0
+        while name_attempts < 3
+            user_name = gets.strip
 
-user = User.new(user_name)
-
-main_menu_header
-puts "Thank you #{user_name}, press enter to continue to options"
-gets
-
-continue = true
-
-    while continue
-        
-        clear
-
-        selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false) do |menu|
-            menu.choice('Start a new order', 1)
-            menu.choice('View an existing order', 2)
-            menu.choice('View Testla Motors Information/Help', 3)
-            menu.choice('Exit', 4)
-
-            case selection
-
-            #new order
-            when 1
-                main_menu_header
-                get_order(stock, order, user)
-                progress_bar
-                order.print_order
-                return_to_menu
-                user.order += 1
-            #existing order
-            when 2
-                main_menu_header
-                if user.order == 0
-                    puts "Sorry #{user.name}, it looks like you haven't placed an order yet."
-                    return_to_menu
+            if user_name != ""
+                clear
+                break
+            else
+                name_attempts += 1
+                if name_attempts == 3
+                    clear
+                    user_name = Faker::Name.first_name
+                    break
                 else
-                    order.print_order
-                    return_to_menu
+                    puts "Sorry, it looks like you didn't enter anything."
                 end
-
-            #Info/help
-            when 3
-                main_menu_header
-                help(dealership)
-            #exit
-            when 4
-                continue = false
-                return continue
             end
         end
-        
     end
+
+    # main_menu_header
+    puts "Welcome #{user_name.capitalize}! Press the enter key to contine to the main menu"
+    $stdin.gets
+
+    user = User.new(user_name.capitalize)
+
+    continue = true
+
+        while continue
+            
+            main_menu_header
+
+            selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false) do |menu|
+                menu.choice('Start a new order', 1)
+                menu.choice('View an existing order', 2)
+                menu.choice('View Testla Motors Information/Help', 3)
+                menu.choice('Exit', 4)
+
+                case selection
+
+                #new order
+                when 1
+                    main_menu_header
+                    get_order(stock, order, user)
+                    progress_bar
+                    order.print_order
+                    return_to_menu
+                    user.order += 1
+                #existing order
+                when 2
+                    main_menu_header
+                    if user.order == 0
+                        puts "Sorry #{user.name}, it looks like you haven't placed an order yet."
+                        return_to_menu
+                    else
+                        order.print_order
+                        return_to_menu
+                    end
+
+                #Info/help
+                when 3
+                    main_menu_header
+                    help(dealership)
+                #exit
+                when 4
+                    continue = false
+                    return continue
+                end
+            end
+        
+        end
     
 end
 
