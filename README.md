@@ -42,6 +42,27 @@ The Testla Motors app was designed to create a platform where user input and err
 
 ### Installation Instructions
 
+1. Firstly, you will need to ensure that ruby is installed on your computer. [Download ruby here](https://www.ruby-lang.org/en/).
+
+2. Download the zip file or clone this repository to your local computer.
+
+3. The Bundler Gem is also required to run the application. If you do not already have it installed, you can install it using the following command:
+
+`gem install bundler`
+
+4. Navigate to the location of the `/src` folder in  this repostitory on your computer. To install the gems used in this project, type the following command:
+
+`bundle install`
+
+5. Now the app is ready to run! To run the app, enter the following command to run the main file:
+
+`ruby main.rb`
+
+6. Alternatively, you may run the app with the insertion of your first name as a user. 
+
+Eg.
+'ruby main.rb Varsha'
+
 ## Planning Process and Design Implementation
 
 

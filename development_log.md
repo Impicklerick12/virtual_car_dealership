@@ -46,10 +46,10 @@ So far I have laid the foundation for the app, asking the user for their name, p
 
 > Friday 24th of April, 2020
 
--
--
--
--
+- Development log updates and README.md alterations.
+- Added colour selection to order.rb
+- Use of colorize gem for headers
+- Creation of command line argument
 
 > Saturday 25th of April, 2020
 
