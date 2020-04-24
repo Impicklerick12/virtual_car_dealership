@@ -3,7 +3,8 @@ require "tty-prompt"
 require_relative "./classes/stock.rb"
 require_relative "./classes/order.rb"
 require_relative "./classes/user.rb"
-require_relative "./helper_methods/helper_methods.rb"
+require_relative "./methods/helper_methods.rb"
+require_relative "./methods/banners.rb"
 
 #Main Application
 def main
@@ -14,13 +15,13 @@ order = Order.new #order hash gets created
 stock = Stock.new #stock hash gets created
 user = User.new(get_name) #user name gets created
 
-initialize_stock(stock)
+# initialize_stock(stock)
 
 continue = true
 
     while continue
         
-        clear #NOT WORKING
+        clear
         selection = TTY::Prompt.new.select("What would you like to do today:",  cycle: true, marker: '>', echo: false) do |menu|
             menu.choice('Start a new order', 1)
             menu.choice('View an existing order', 2)

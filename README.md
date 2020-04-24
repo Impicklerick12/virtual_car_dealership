@@ -59,6 +59,7 @@ The Testla Motors app was designed to create a platform where user input and err
 
 ![trello day 2](docs/trello_board_day_2.png "Trello Board Day 2")
 
+![trello day 3](docs/trello_board_day_3.png "Trello Board Day 3")
 
 ### Testing
 

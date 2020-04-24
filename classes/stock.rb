@@ -1,7 +1,7 @@
 require "tty-prompt"
 require_relative "vehicle.rb"
 require_relative "user.rb"
-require_relative "../helper_methods/helper_methods.rb"
+require_relative "../methods/helper_methods.rb"
 
 class Stock #shows the stock vehicles and add new vehicles to the stock
 
@@ -15,18 +15,16 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
     end
 
     def display_model(vehicle)
-        # puts "Testla Model: #{vehicle.model}"
-        # puts "Price: $#{vehicle.price}"
         vehicle.display_model
         vehicle.display_features
         puts
     end
 
-    def display_stock
-        @menu.each do |model, price|
-            puts model
-        end
-    end
+    # def display_stock
+    #     @menu.each do |model, price|
+    #         puts model
+    #     end
+    # end
 
     def select
         model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:") do |menu|
@@ -39,9 +37,9 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
         return model
     end
 
-    def add_colour(colour)
-        @menu[vehicle.colour] = colour
-    end
+    # def add_colour(colour)
+    #     @menu[vehicle.colour] += colour
+    # end
 end
 
 # stock = Stock.new
