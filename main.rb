@@ -42,7 +42,7 @@ def main
         end
     end
 
-    # main_menu_header
+    main_banner_still
     puts "Welcome #{user_name.capitalize}! Press the enter key to contine to the main menu"
     $stdin.gets
 
