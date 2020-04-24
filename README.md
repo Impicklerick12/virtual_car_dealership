@@ -10,7 +10,7 @@ Link to the repository - [https://github.com/Impicklerick12/virtual_car_dealersh
 
 Files:
 
-* [https://github.com/Impicklerick12/virtual_car_dealership/blob/master/development_log.md](https://github.com/Impicklerick12/virtual_car_dealership/blob/master/development_log.md "Development Log")
+* [Development Log](https://github.com/Impicklerick12/virtual_car_dealership/blob/master/development_log.md "Development Log Link")
 
 ## About the App
 
