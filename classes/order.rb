@@ -1,4 +1,5 @@
 require_relative "../methods/helper_methods.rb"
+require_relative "../methods/banners.rb"
 require_relative "vehicle.rb"
 require_relative "stock.rb"
 
@@ -28,17 +29,18 @@ class Order
 
     def print_order
         clear
-        #TESTLA BANNER HERE
-        puts "Your Testla order confirmation"
+        main_banner_still
         puts
-        puts "=" * 55
+        puts "Your order confirmation"
+        puts
+        puts HEADER_LINE
         @order.each do |vehicle, quantity, colour|
             puts
-            puts "Testla #{vehicle.model} ----- Colour: #{vehicle.colour}"
+            puts "Testla #{vehicle.model}                    Colour: #{vehicle.colour}"
             puts
-            puts "Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse} ---- Quantity: #{quantity}"
+            puts "Price: $#{vehicle.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}                      Quantity: #{quantity}"
             puts
-            puts "-" * 55
+            puts HEADER_LINE
         end
         puts
         puts "Total: $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"

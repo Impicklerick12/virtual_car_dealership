@@ -29,6 +29,7 @@ def return_to_menu
     puts "Press enter to return to the menu"
     $stdin.gets
     clear
+    main_menu_header
 end
 
 def extras
@@ -65,6 +66,14 @@ def add_colour
     return colour
 end
 
+def happy_to_continue
+    puts
+    yes_no = TTY::Prompt.new.select("Are you happy to proceed with your selections today?") do |menu|
+        menu.choice("Yes")
+        menu.choice("No")
+    end
+end
+
 def get_order(stock, order, vehicle)
     
     item = stock.select
@@ -72,12 +81,13 @@ def get_order(stock, order, vehicle)
     h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
     
     #ADD IN TESTLA MOTORS BANNER HERE!
+
     stock.display_model(h[item])
     (h[item]).add_colour(add_colour)
 
     order.add_vehicle(h[item],1)
-
-    e = {"Carbon Wheels" => 1500, "Oak Wood Interior" => 1500, "Self-Driving Capability" => 7000, "Luicrously Fast Mode" => 3000}
-    extras
+    
+    # e = {"Carbon Wheels" => 1500, "Oak Wood Interior" => 1500, "Self-Driving Capability" => 7000, "Luicrously Fast Mode" => 3000}
+    # extras
 
 end

@@ -1,7 +1,9 @@
-
+require 'colorize'
 require "tty-prompt"
+require "test/unit"
 require_relative "../methods/helper_methods.rb"
 #every vehicle has a type, model, features, price and colour
+
 class Vehicle
 
     attr_accessor :model, :price, :features, :colour
@@ -14,13 +16,15 @@ class Vehicle
     end
 
     def display_model
-        puts "Vehicle Model: #{@model}"
-        puts "Price: $#{@price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+        puts "Vehicle Model: ".colorize(:red) +  "#{@model}"
+        puts
+        puts "Price: ".colorize(:red) + "$#{@price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
     end
 
     def display_features
         puts
-        puts "Features:"
+        puts "Features:".colorize(:red)
+        puts
         @features.each do |feature|
             puts "- #{feature}"
         end

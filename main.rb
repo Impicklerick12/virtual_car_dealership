@@ -75,6 +75,7 @@ def main
                     main_menu_header
                     if user.order == 0
                         puts "Sorry #{user.name}, it looks like you haven't placed an order yet."
+                        puts
                         return_to_menu
                     else
                         order.print_order

@@ -54,7 +54,7 @@ def progress_bar
     puts
     puts
     puts
-    puts "     Please wait while we process your order."
+    puts "     Please wait while we process your order.".colorize(:red)
     puts
     puts
     bar = TTY::ProgressBar.new("[:bar]", total: 50)

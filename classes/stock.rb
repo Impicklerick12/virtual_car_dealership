@@ -2,6 +2,7 @@ require "tty-prompt"
 require_relative "vehicle.rb"
 require_relative "user.rb"
 require_relative "../methods/helper_methods.rb"
+require_relative "../methods/banners.rb"
 
 class Stock #shows the stock vehicles and add new vehicles to the stock
 
@@ -15,6 +16,7 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
     end
 
     def display_model(vehicle)
+        main_menu_header
         vehicle.display_model
         vehicle.display_features
         puts
