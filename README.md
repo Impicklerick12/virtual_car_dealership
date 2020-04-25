@@ -98,6 +98,14 @@ Testing was done at every stage in the application construction process. Initial
 
 ### Gems
 
+TTY-Prompt: Enabled the creation of clean listed options and menus. This was especially handy in minimising user input error, as only listed options are able to be selected.
+
+Colorize: Allowed strings to be coloured, providing an extra visual element to the displays.
+
+Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
+
+Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
+
 ### Error Handling
 
 ### Future Planning and Implementation
