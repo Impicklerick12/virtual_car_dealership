@@ -30,6 +30,7 @@ def return_to_menu
     $stdin.gets
     clear
     main_menu_header
+    sleep(1)
 end
 
 def extras
@@ -79,8 +80,6 @@ def get_order(stock, order, vehicle)
     item = stock.select
 
     h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
-    
-    #ADD IN TESTLA MOTORS BANNER HERE!
 
     stock.display_model(h[item])
     (h[item]).add_colour(add_colour)

@@ -39,8 +39,8 @@ def main_banner_still
     puts "    888     888             888     888     888        d88P   888 ".colorize(:red)
     puts "    888     888       Y88b  d88P    888     888       d8888888888 ".colorize(:red)
     puts "    888     8888888888  Y8888P      888     88888888 d88P     888 ".colorize(:red)
-    puts
-    puts "Welcome to Testla Motors!".center(HEADER_LENGTH)
+    # puts
+    # puts "Welcome to Testla Motors!".center(HEADER_LENGTH)
     puts
 end
 
@@ -76,4 +76,19 @@ def main_menu_header
     puts
     puts HEADER_LINE
     puts
+end
+
+def farewell_header
+    clear
+    puts HEADER_LINE
+    puts
+    puts "___ ____ ____ ___ _    ____" .center(HEADER_LENGTH).colorize(:red)
+    puts "  |  |___ [__   |  |    |__| ".center(HEADER_LENGTH).colorize(:red)
+    puts "  |  |___ ___]  |  |___ |  | ".center(HEADER_LENGTH).colorize(:red)
+    puts
+    puts "Thank you for visiting Testla Motors!".center(HEADER_LENGTH)
+    puts
+    puts HEADER_LINE
+    puts
+    sleep(2)
 end

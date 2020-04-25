@@ -43,6 +43,9 @@ def main
     end
 
     main_banner_still
+    sleep(1)
+
+    puts
     puts "Welcome #{user_name.capitalize}! Press the enter key to contine to the main menu"
     $stdin.gets
 
@@ -53,6 +56,7 @@ def main
         while continue
             
             main_menu_header
+            sleep(1)
 
             selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false) do |menu|
                 menu.choice('Start a new order', 1)
@@ -65,6 +69,7 @@ def main
                 #new order
                 when 1
                     main_menu_header
+                    sleep(1)
                     get_order(stock, order, user)
                     progress_bar
                     order.print_order
@@ -73,6 +78,7 @@ def main
                 #existing order
                 when 2
                     main_menu_header
+                    sleep(1)
                     if user.order == 0
                         puts "Sorry #{user.name}, it looks like you haven't placed an order yet."
                         puts
@@ -85,10 +91,13 @@ def main
                 #Info/help
                 when 3
                     main_menu_header
+                    sleep(1)
                     help(dealership)
                 #exit
                 when 4
                     continue = false
+                    farewell_header
+                    clear
                     return continue
                 end
             end
