@@ -52,7 +52,7 @@ The Testla Motors app was designed to create a platform where user input and err
 
 4. Navigate to the location of the `/src` folder in  this repostitory on your computer. To install the gems used in this project, type the following command:
 
-    `bundle install`
+    `> bundle install`
 
 5. Now the app is ready to run! To run the app, enter the following command to run the main file:
 
@@ -74,8 +74,6 @@ Eventually I settled on the virtual car dealership application as it required mu
 
 ![second flowchart](docs/flowchart_1.jpeg "Second Flowchart Draft")
 
-### Timeline
-
 ### Implementation Plan (Trello)
 
 I used Trello as a project manager application, which included adding 'cards' for all the features that needed implementation as well as optional features and documentation items. Cards were labelled according to their nature (coding or documentation) and also by their importance (P1, P2, P3). Additional items were added close to the submission date, for possible future implementation.
@@ -92,9 +90,38 @@ Testing was done at every stage in the application construction process. Initial
 
 ### Code Structure
 
-- 'main.rb'
+    '> main.rb'
 
-- 'classes/'
+The main file that controls the application flow and user_name entry
+
+    '> classes/vehicle.rb'
+
+Holds the data for each vehicle model. Each model is initiated, inheriting the variables from the parent vehicle class.
+
+
+    '> classes/dealership.rb'
+
+The dealership class, which when initiated provides the contact information for the help menu.
+
+    '> classes/order.rb'
+
+The file that processes the order information and display.
+
+    '> classes/stock.rb
+
+The stock class that includes the information on each model that has been initiated.
+
+    '> classes/user.rb'
+
+File that contains the user information. It is initiated from the main screen, provided a name attribute, and contains the number of orders.
+
+    '> methods/helper_methods.rb'
+
+A handy file that allows access to various methods that are called throughout the application.
+
+    '> methods/banners.rb'
+
+Contains methods that create the visual banners that are displayed.
 
 ### Gems
 
@@ -105,8 +132,6 @@ Colorize: Allowed strings to be coloured, providing an extra visual element to t
 Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
 
 Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
-
-### Error Handling
 
 ### Future Planning and Implementation
 
