@@ -48,23 +48,25 @@ The Testla Motors app was designed to create a platform where user input and err
 
 3. The Bundler Gem is also required to run the application. If you do not already have it installed, you can install it using the following command:
 
-`gem install bundler`
+    `> gem install bundler`
 
 4. Navigate to the location of the `/src` folder in  this repostitory on your computer. To install the gems used in this project, type the following command:
 
-`bundle install`
+    `bundle install`
 
 5. Now the app is ready to run! To run the app, enter the following command to run the main file:
 
-`ruby main.rb`
+    `> ruby main.rb`
 
-6. Alternatively, you may run the app with the insertion of your first name as a user. 
+6. Alternatively, you may run the app with the insertion of your first name as a user. Eg.
 
-Eg.
-'ruby main.rb Varsha'
+    '> ruby main.rb varsha'
 
 ## Planning Process and Design Implementation
 
+The planning process started with a brainstorming session to provide some possibile applications that would satisfy the requirements of the rubric, yet also provide a challenege for myself. Initially I was focused on a virtual garden application, which would require the user to maintain a garden and provide plants with care. Another alternative was a quiz application, where users would need to complete several topics in order to complete the game. 
+
+Eventually I settled on the virtual car dealership application as it required multiple classes and inhertiance, and a variety of conditional control structures. The first step was to determine what the purpose of the application was, then move on to what the framework would look like, and finally how the user would navigate through the menus. 
 
 ### Flow Chart
 
@@ -76,6 +78,8 @@ Eg.
 
 ### Implementation Plan (Trello)
 
+I used Trello as a project manager application, which included adding 'cards' for all the features that needed implementation as well as optional features and documentation items. Cards were labelled according to their nature (coding or documentation) and also by their importance (P1, P2, P3). Additional items were added close to the submission date, for possible future implementation.
+
 ![trello day 1](docs/trello_board_day_1.png "Trello Board Day 1")
 
 ![trello day 2](docs/trello_board_day_2.png "Trello Board Day 2")
@@ -83,6 +87,8 @@ Eg.
 ![trello day 3](docs/trello_board_day_3.png "Trello Board Day 3")
 
 ### Testing
+
+Testing was done at every stage in the application construction process. Initially it was quite simple to manually test that features/classes/methods were producing the expected output. As the project went along and the code was refactored, I found it more difficult to determine *what* needed testing and what user errors were simply illiminated by the use of the TTY-Prompt gem. 
 
 ### Code Structure
 
