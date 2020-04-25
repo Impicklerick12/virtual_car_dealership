@@ -60,7 +60,7 @@ The Testla Motors app was designed to create a platform where user input and err
 
 6. Alternatively, you may run the app with the insertion of your first name as a user. Eg.
 
-    '> ruby main.rb varsha'
+    `> ruby main.rb varsha`
 
 ## Planning Process and Design Implementation
 
@@ -84,54 +84,56 @@ I used Trello as a project manager application, which included adding 'cards' fo
 
 ![trello day 3](docs/trello_board_day_3.png "Trello Board Day 3")
 
+![trello day 4](docs/trello_board_day_4.png "Trello Board Day 4")
+
 ### Testing
 
 Testing was done at every stage in the application construction process. Initially it was quite simple to manually test that features/classes/methods were producing the expected output. As the project went along and the code was refactored, I found it more difficult to determine *what* needed testing and what user errors were simply illiminated by the use of the TTY-Prompt gem. 
 
 ### Code Structure
 
-    '> main.rb'
+    `> main.rb`
 
 The main file that controls the application flow and user_name entry
 
-    '> classes/vehicle.rb'
+    `> classes/vehicle.rb`
 
 Holds the data for each vehicle model. Each model is initiated, inheriting the variables from the parent vehicle class.
 
 
-    '> classes/dealership.rb'
+    `> classes/dealership.rb`
 
 The dealership class, which when initiated provides the contact information for the help menu.
 
-    '> classes/order.rb'
+    `> classes/order.rb`
 
 The file that processes the order information and display.
 
-    '> classes/stock.rb
+    `> classes/stock.rb`
 
 The stock class that includes the information on each model that has been initiated.
 
-    '> classes/user.rb'
+    `> classes/user.rb`
 
 File that contains the user information. It is initiated from the main screen, provided a name attribute, and contains the number of orders.
 
-    '> methods/helper_methods.rb'
+    `> methods/helper_methods.rb`
 
 A handy file that allows access to various methods that are called throughout the application.
 
-    '> methods/banners.rb'
+    `> methods/banners.rb`
 
 Contains methods that create the visual banners that are displayed.
 
 ### Gems
 
-TTY-Prompt: Enabled the creation of clean listed options and menus. This was especially handy in minimising user input error, as only listed options are able to be selected.
+* TTY-Prompt: Enabled the creation of clean listed options and menus. This was especially handy in minimising user input error, as only listed options are able to be selected.
 
-Colorize: Allowed strings to be coloured, providing an extra visual element to the displays.
+* Colorize: Allowed strings to be coloured, providing an extra visual element to the displays.
 
-Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
+* Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
 
-Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
+* Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
 
 ### Future Planning and Implementation
 
