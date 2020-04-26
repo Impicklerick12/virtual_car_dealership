@@ -103,6 +103,8 @@ I used Trello as a project manager application, which included adding 'cards' fo
 
 Testing was done at every stage in the application construction process. Initially it was quite simple to manually test that features/classes/methods were producing the expected output. As the project went along and the code was refactored, I found it more difficult to determine *what* needed testing and what user errors were simply illiminated by the use of the TTY-Prompt gem. 
 
+![testla testing](docs/testla_testing.png "Testa Testing Spreadsheet")
+
 ### Code Structure
 
     `> main.rb`
