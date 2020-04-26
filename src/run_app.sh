@@ -1,3 +1,5 @@
+!/usr/bin/env ruby
+
 echo "Welcome to the Testla Motors Virtual Dealership!"
 
 echo "Lets begin the install now"
@@ -10,10 +12,6 @@ echo "Time to ensure all required gems are installed"
 
 bundle install
 
-echo "All gems have been installed, running application for the first time now"
+echo "All gems have been installed, running application for the first time now, or alternatively you can run the file byt adding your name (eg. ruby main.rb elon)"
 
 ruby main.rb
-
-echo "Alternatively you can run the file substituting (your_name) with your first name"
-
-ruby.main.rb (your_name)
