@@ -13,3 +13,7 @@ bundle install
 echo "All gems have been installed, running application for the first time now"
 
 ruby main.rb
+
+echo "Alternatively you can run the file substituting (your_name) with your first name"
+
+ruby.main.rb (your_name)

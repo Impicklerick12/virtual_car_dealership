@@ -16,9 +16,13 @@ Files:
 
 ### Description
 
-The Testla Motors app is a representation of an virtual car dealership. It is a MVP that allows the user to shop through different Testla models, customise them, and confim their purchase. There are also optional additions that may be purchased and added to the orders.
+The Testla Motors app is a representation of an virtual car dealership. It is a MVP that allows the user to shop through different Testla models, customise them, and confim their purchase.
+
+![testla main menu](docs/testla_main_menu.png "Testla Main Menu")
 
 The app was created in a time of uncertainty, where a large portion of the population are confined mostly to their homes with minimal access to physical shops and industries. Online interaction with customers is critical, and a solutions needs to be  developed which allow any potential customers to shop from home with clarity and confidence. The Testla Motors app provides a platform where interested car enthustiasts are able to browse the Testla models, view the different features, create and customize an order, and view any existing orders. All from the comfort of their living room!
+
+![testla order confirmation](docs/testla_order_confirmation.png "Testla Order Confirmation")
 
 ### Functionality
 
@@ -68,11 +72,17 @@ The planning process started with a brainstorming session to provide some possib
 
 Eventually I settled on the virtual car dealership application as it required multiple classes and inhertiance, and a variety of conditional control structures. The first step was to determine what the purpose of the application was, then move on to what the framework would look like, and finally how the user would navigate through the menus. 
 
+MORE HERE
+
 ### Flow Chart
 
 ![first draft flowchart](docs/first_draft_flowchart.JPG "First Flowchart Draft")
 
 ![second flowchart](docs/flowchart_1.jpeg "Second Flowchart Draft")
+
+Adjusted flowchart that removes the optional extras options, and adds in the return_to_menu method that requires the user to press enter to proceed.
+
+![third flowchart](docs/updated_flowchart.jpeg "Final Flowchart")
 
 ### Implementation Plan (Trello)
 
@@ -85,6 +95,10 @@ I used Trello as a project manager application, which included adding 'cards' fo
 ![trello day 3](docs/trello_board_day_3.png "Trello Board Day 3")
 
 ![trello day 4](docs/trello_board_day_4.png "Trello Board Day 4")
+
+![trello day 5](docs/trello_board_day_5.png "Trello Board Day 5")
+
+![trello day 6](docs/trello_board_day_4.png "Trello Board Day 6")
 
 ### Testing
 
@@ -129,13 +143,23 @@ Contains methods that create the visual banners that are displayed.
 
 * TTY-Prompt: Enabled the creation of clean listed options and menus. This was especially handy in minimising user input error, as only listed options are able to be selected.
 
+![testla main menu](docs/testla_main_menu.png "Testla Main Menu")
+
 * Colorize: Allowed strings to be coloured, providing an extra visual element to the displays.
 
 * Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
 
+![progress bar](docs/testla_loading_bar "Testla Loading Bar")
+
 * Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
 
+![fake contact information](docs/testla_contact_info "Fake Contact Information")
+
 ### Future Planning and Implementation
+
+Currently, the Testla Motors app can generate an order from user input, allowing for a choice of model and vehicle colour. This input it tightly restricted to simple arrow key navigation and the enter/return key. It was designed with minimal error generation in mind. Orders are then saved and are accessable from the main menu. Multiple ruby gems allowed customization of menus and options, and to provide a nice visual presentation of the application.
+
+In the future I would like to add the ability to customize each order extensively. Following a step-by-step order process that will provide alternative upgrades and features, that will be added to the total order. I belive this implementation would require adjustments to the vehicle class, creating a new hash of optional extras. It would also be nice for a user to go back one step, or to the beginning of the order process, if they have made a mistake. One implementation I would have liked to add would be the ability to either remove an exisiting order, or adjust it cumpletely. This would require an extension loop following from the exisiting order menu option. 
 
 ### Acccessibility
 
