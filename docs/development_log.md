@@ -53,7 +53,19 @@ So far I have laid the foundation for the app, asking the user for their name, p
 
 > Saturday 25th of April, 2020
 
--
--
--
--
+- Creation of help ssh file
+- Visual and application flow changes
+- Added pseudocode to areas that needed extra explanation
+- Included gem information and testing description
+
+> Sunday 26th of April, 2020
+
+- Refactoring + extra pseudocode
+- Altered directory contents to suit assessment guidelines
+- Additional screenshots
+
+-----
+
+## Fulltime
+
+At the beginning of the week I could not even imagine or visualise what the end of the week would look like. I was so immersed in the possible obstacles, that I lost sight of what needed to be done initially to get momentum moving forwards. In saying that, I am extremely proud with the product I have produced. In reviewing my practices I would alter a few of them, such as including more test cases in *every* step of the process. Another would be to write down the full application flow as a guideline (pseudocode) in my code, and then proceed to make classes and methods etc. My process including adding the required classes initially, and then building the structure around that. Ultimately I had a incredible experience constructing my application, and learned more than I could imagine regarding the software development process.

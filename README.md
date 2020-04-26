@@ -82,6 +82,7 @@ MORE HERE
 
 Adjusted flowchart that removes the optional extras options, and adds in the return_to_menu method that requires the user to press enter to proceed.
 
+NOT WORKING
 ![third flowchart](docs/updated_flowchart.jpeg "Final Flowchart")
 
 ### Implementation Plan (Trello)
