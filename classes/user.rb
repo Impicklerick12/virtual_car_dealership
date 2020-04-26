@@ -9,6 +9,7 @@ def validate_name(user_name)
 	
 end
 
+#user class containing the user name and number of orders
 class User
     attr_accessor :order, :user_name
 	

@@ -4,16 +4,12 @@ require_relative "../classes/dealership.rb"
 require_relative "../classes/stock.rb"
 require_relative "banners.rb"
 
-# def initialize_stock(stock)
-
-#     stock.add_item(Speedster.new).add_item(ModelM.new).add_item(ModelX.new).add_item(Cybertruck.new)
-
-# end
-
+#clear method
 def clear
     return system("clear")
 end
 
+#help method that is called from the main menu. Displays the dealership contact info and instructions
 def help(dealership)
     clear
     main_menu_header
@@ -25,6 +21,7 @@ def help(dealership)
     return_to_menu
 end
 
+#enter to continue method
 def return_to_menu
     puts "Press enter to return to the menu"
     $stdin.gets
@@ -33,29 +30,31 @@ def return_to_menu
     sleep(1)
 end
 
-def extras
-    puts
-    yes_no = TTY::Prompt.new.select("Would you like to add any optional extras?") do |menu|
-                menu.choice("Yes")
-                menu.choice("No")
-    end
-    clear
+#optional extras method, would display TTY-Prompt menu with selectable options
+# def extras
+#     puts
+#     yes_no = TTY::Prompt.new.select("Would you like to add any optional extras?") do |menu|
+#                 menu.choice("Yes")
+#                 menu.choice("No")
+#     end
+#     clear
 
-    if yes_no == "No"
-        return
-    else yes_no == "Yes"
+#     if yes_no == "No"
+#         return
+#     else yes_no == "Yes"
 
-        extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
-            menu.choice('Carbon Wheels')
-            menu.choice('Oak Wood Interior')
-            menu.choice('Self-Driving Capability')
-            menu.choice('Ludicrously Fast Mode')
-        end
-        return extras
+#         extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
+#             menu.choice('Carbon Wheels')
+#             menu.choice('Oak Wood Interior')
+#             menu.choice('Self-Driving Capability')
+#             menu.choice('Ludicrously Fast Mode')
+#         end
+#         return extras
 
-    end
-end
+#     end
+# end
 
+#add colour TTY-Prompt menu. Returns the selected colour
 def add_colour
     colour = TTY::Prompt.new.select("Please chose your colour:") do |menu|
         menu.choice("Black")
@@ -67,14 +66,16 @@ def add_colour
     return colour
 end
 
-def happy_to_continue
-    puts
-    yes_no = TTY::Prompt.new.select("Are you happy to proceed with your selections today?") do |menu|
-        menu.choice("Yes")
-        menu.choice("No")
-    end
-end
 
+# def happy_to_continue
+#     puts
+#     yes_no = TTY::Prompt.new.select("Are you happy to proceed with your selections today?") do |menu|
+#         menu.choice("Yes")
+#         menu.choice("No")
+#     end
+# end
+
+#method to take the users order
 def get_order(stock, order, vehicle)
     
     item = stock.select
@@ -88,5 +89,4 @@ def get_order(stock, order, vehicle)
     
     # e = {"Carbon Wheels" => 1500, "Oak Wood Interior" => 1500, "Self-Driving Capability" => 7000, "Luicrously Fast Mode" => 3000}
     # extras
-
 end

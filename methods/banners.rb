@@ -44,10 +44,6 @@ def main_banner_still
     puts
 end
 
-# pastel = Pastel.new
-# red = pastel.on_red(" ")
-# black = pastel.on_black(" ")
-
 def progress_bar
     clear
     puts

@@ -15,10 +15,6 @@ class Order
         @order[vehicle] += quantity 
     end
 
-    def add_extras
-
-    end
-
     def total_price
         total = 0
         @order.each do |vehicle, quantity|
@@ -34,6 +30,7 @@ class Order
         puts "Your order confirmation"
         puts
         puts HEADER_LINE
+
         @order.each do |vehicle, quantity, colour|
             puts
             puts "Testla #{vehicle.model}                    Colour: #{vehicle.colour}"
@@ -42,18 +39,10 @@ class Order
             puts
             puts HEADER_LINE
         end
+
         puts
         puts "Total: $#{total_price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
         puts
     end
 
 end
-
-#testing the order class
-#SUCCESSFUL!
-#added tests to spreadsheet
-# order = Order.new
-# # order.add_vehicle(Vehicle.new("Speedster", 200000, "Red"), 1)
-# # order.add_vehicle(Vehicle.new("Model X", 84990, "Black"), 2)
-# order.add_vehicle(Speedster.new("Yellow"), 2)
-# order.print_order
