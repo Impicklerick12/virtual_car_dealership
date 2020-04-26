@@ -150,18 +150,14 @@ Contains methods that create the visual banners that are displayed.
 
 * Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
 
-![progress bar](docs/testla_loading_bar "Testla Loading Bar")
+![progress bar](docs/testla_loading_bar.png "Testla Loading Bar")
 
 * Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
 
-![fake contact information](docs/testla_contact_info "Fake Contact Information")
+![fake contact information](docs/testla_contact_info.png "Fake Contact Information")
 
 ### Future Planning and Implementation
 
 Currently, the Testla Motors app can generate an order from user input, allowing for a choice of model and vehicle colour. This input it tightly restricted to simple arrow key navigation and the enter/return key. It was designed with minimal error generation in mind. Orders are then saved and are accessable from the main menu. Multiple ruby gems allowed customization of menus and options, and to provide a nice visual presentation of the application.
 
-In the future I would like to add the ability to customize each order extensively. Following a step-by-step order process that will provide alternative upgrades and features, that will be added to the total order. I belive this implementation would require adjustments to the vehicle class, creating a new hash of optional extras. It would also be nice for a user to go back one step, or to the beginning of the order process, if they have made a mistake. One implementation I would have liked to add would be the ability to either remove an exisiting order, or adjust it cumpletely. This would require an extension loop following from the exisiting order menu option. 
-
-### Acccessibility
-
-
+In the future I would like to add the ability to customize each order extensively. Following a step-by-step order process that will provide alternative upgrades and features, that will be added to the total order. I belive this implementation would require adjustments to the vehicle class, creating a new hash of optional extras. It would also be nice for a user to go back one step, or to the beginning of the order process, if they have made a mistake. One implementation I would have liked to add would be the ability to either remove an exisiting order, or adjust it cumpletely. This would require an extension loop following from the exisiting order menu option.
