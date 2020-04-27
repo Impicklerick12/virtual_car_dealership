@@ -86,7 +86,6 @@ The troubles I came across when implementing my application design revolved arou
 
 Adjusted flowchart that removes the optional extras options, and adds in the return_to_menu method that requires the user to press enter to proceed.
 
-NOT WORKING
 ![updated flowchart](docs/updated_flowchart.jpeg "Final Flowchart")
 
 ### Implementation Plan (Trello)
@@ -148,17 +147,17 @@ Contains methods that create the visual banners that are displayed.
 
 ### Gems
 
-* TTY-Prompt: Enabled the creation of clean listed options and menus. This was especially handy in minimising user input error, as only listed options are able to be selected.
+* **TTY-Prompt:** Enabled the creation of clean listed options and menus. This was especially handy in minimising user input error, as only listed options are able to be selected.
 
 ![testla main menu](docs/testla_main_menu.png "Testla Main Menu")
 
-* Colorize: Allowed strings to be coloured, providing an extra visual element to the displays.
+* **Colorize:** Allowed strings to be coloured, providing an extra visual element to the displays.
 
-* Progress-Bar: Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
+* **Progress-Bar:** Another visual element to display the creation of an order. Adds authenticity to the order confirmation process.
 
 ![progress bar](docs/testla_loading_bar.png "Testla Loading Bar")
 
-* Faker: Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
+* **Faker:** Was used extensively to provide information that did not require hard coding. The dealership contact information is generated using Faker variables, and the user name will be generated at random if the user fails to provide a name at application startup.
 
 ![fake contact information](docs/testla_contact_info.png "Fake Contact Information")
 
