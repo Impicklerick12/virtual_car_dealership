@@ -43,24 +43,24 @@ end
 #each model class, including inherited variables from vehicle classes including new values
 class ModelX < Vehicle
     def initialize
-        super("Model X", 84990, ["Super Fast", "Looks awesome"])
+        super("Model X", 84990, ["7 Person Max capacity", "Dual Motor AWD", "5-Star Safety Rating", "Falcon Wing Doors", "0-60mph in 2.5 seconds"])
     end 
 end
 
 class ModelM < Vehicle
     def initialize
-        super("Model M", 79990, ["Super Fast", "Looks awesome"])
+        super("Model M", 79990, ["Dual Motor AWD", "5 Person Max Capacity", "Long Range Battery", "0-60mph in 2.3 seconds"])
     end 
 end
 
 class Speedster < Vehicle
     def initialize
-        super("Speedster", 200000, ["Super Fast", "Looks awesome"])
+        super("Speedster", 200000, ["0-60mph in 1.9 seconds", "250mph Top Speed", "4 Person Max Seating", "620 Mile Range"])
     end  
 end
 
 class Cybertruck < Vehicle
     def initialize
-        super("Cybertruck", 39990, ["Super Fast", "Looks awesome"])
+        super("Cybertruck", 39990, ["Drivetrain RWD", "7,500+lbs Towing Capacity", "Adaptive Air Suspension", "250 mile range", "0-60mph in 6 seconds"])
     end
 end

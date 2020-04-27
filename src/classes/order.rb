@@ -31,7 +31,7 @@ class Order
         puts
         puts HEADER_LINE
 
-        @order.each do |vehicle, quantity, colour|
+        @order.each do |vehicle, quantity|
             puts
             puts "Testla #{vehicle.model}                    Colour: #{vehicle.colour}"
             puts

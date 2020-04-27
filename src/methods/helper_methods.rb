@@ -1,4 +1,5 @@
 require "tty-prompt"
+require "colorize"
 require_relative "../classes/vehicle.rb"
 require_relative "../classes/dealership.rb"
 require_relative "../classes/stock.rb"
@@ -16,14 +17,17 @@ def help(dealership)
     puts
     puts dealership.contact_info
     puts
-    puts "Testla aims to provide solutions for a modern world. \nTo navigate around the app, please use your arrow keys and the enter key to select the options you require. \nIf you have any issues, please don't hestitate to contact us via our above contact information."
+    puts "Testla aims to provide solutions for a modern world. 
+    \nOur models are entirely electric powered and provide the highest performance available in any electic vehicle worldwide.
+    \nTo navigate around the app, please use your arrow keys and the enter key to select the options you require. 
+    \nIf you have any issues, please don't hestitate to contact us via our above contact information."
     puts
     return_to_menu
 end
 
 #enter to continue method
 def return_to_menu
-    puts "Press enter to return to the menu"
+    puts "Press enter to return to the menu".colorize(:red)
     $stdin.gets
     clear
     main_menu_header
@@ -56,7 +60,7 @@ end
 
 #add colour TTY-Prompt menu. Returns the selected colour
 def add_colour
-    colour = TTY::Prompt.new.select("Please chose your colour:") do |menu|
+    colour = TTY::Prompt.new.select("Please chose your colour:", active_color: :red) do |menu|
         menu.choice("Black")
         menu.choice("White")
         menu.choice("Red")

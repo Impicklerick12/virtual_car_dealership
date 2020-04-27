@@ -17,12 +17,21 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
 
      #method that includes the menu options for models
      def select
-        model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:") do |menu|
-            menu.choice("Model X")
-            menu.choice("Model M")
-            menu.choice("Speedster")
-            menu.choice("Cybertruck")
-        end
+        menu = [
+            "Model X",
+            "Model M",
+            "Speedster",
+            "Cybertruck",
+            {name: "Model 4", disabled: "(Unavailable)"},
+            {name: "Space X Shuttle", disabled: "(Unavailable)"}
+        ]
+
+        model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:", menu, active_color: :red)
+            # menu.choice("Model X")
+            # menu.choice("Model M")
+            # menu.choice("Speedster")
+            # menu.choice("Cybertruck")
+        # end
         clear
         return model
     end

@@ -59,7 +59,7 @@ continue = true #main loop, until the user choses quit and continue = false
         main_menu_header
         sleep(1)
 
-        selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false) do |menu|
+        selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false, active_color: :red) do |menu|
             menu.choice('Start a new order', 1)
             menu.choice('View an existing order', 2)
             menu.choice('View Testla Motors Information/Help', 3)
@@ -96,7 +96,7 @@ continue = true #main loop, until the user choses quit and continue = false
             when 3
                 main_menu_header
                 sleep(1)
-                help(dealership)
+                help(dealership) #calls helper method
 
             #exit
             when 4

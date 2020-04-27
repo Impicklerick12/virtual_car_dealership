@@ -9,7 +9,7 @@
 > Monday 20th of April, 2020
 
 - Assessment was presented to class, rubric outlined
-- Inital flowchart created - ![first flow chart](https://github.com/Impicklerick12/virtual_car_dealership/blob/master/docs/first_draft_flowchart.JPG "First Draft Flowchart)
+- Inital flowchart created
 - Creation of Trello board
 - Add every item in rubric to Trello
 

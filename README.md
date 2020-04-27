@@ -66,11 +66,17 @@ The Testla Motors app was designed to create a platform where user input and err
 
 ## Planning Process and Design Implementation
 
-The planning process started with a brainstorming session to provide some possibile applications that would satisfy the requirements of the rubric, yet also provide a challenege for myself. Initially I was focused on a virtual garden application, which would require the user to maintain a garden and provide plants with care. Another alternative was a quiz application, where users would need to complete several topics in order to complete the game. 
+The planning process started with a brainstorming session to provide some possible applications that would satisfy the requirements of the rubric, yet also provide a challenge for myself. Initially I was focused on a virtual garden application, which would require the user to maintain a garden and provide plants with care. Another alternative was a quiz application, where users would need to complete several topics in order to complete the game. 
 
-Eventually I settled on the virtual car dealership application as it required multiple classes and inhertiance, and a variety of conditional control structures. The first step was to determine what the purpose of the application was, then move on to what the framework would look like, and finally how the user would navigate through the menus. 
+Eventually I settled on the virtual car dealership application as it required multiple classes and inheritance, and a variety of conditional control structures. The first step was to determine what the purpose of the application was, then move on to what the framework would look like, and finally how the user would navigate through the menus. 
 
-MORE HERE
+Firstly I created my parent class, Vehicle, and provided its initilaized attributes which incluuded model, price and feature. Next was the creation of the sub classes, which individually included information for each attribute initialized in Vehicle. I then set out to create a Stock and Order class, which separately would house a hash containing the available stock, and then the selected menu items as the order. In each class, I needed to create methods to add vehicles, print menus, and eventually print the order confirmation. 
+
+Once I was able to test each feature and then run through the whole order process in one loop, I began to add the main menu and other visual features. The main menu was created using the TTY-Prompt gem, which would produce a value that I interpreted using a case statement. The choice of model menu was also created using the same gem, yet the value selected from the menu was compared to a hash I created, which when the key was selected, the value would be added to the order hash (the model class object e.g. Speedster.new).
+
+It took a little time and effort to add the colour attribute to each model selection. Again I used the TTY-Prompt gem to create the list of colour options, then attached the resulting selection to the model object using a method created in the parent class. This allows the user to loop through the order process several times, each time selecting a new model and different colour.
+
+The troubles I came across when implementing my application design revolved around refactoring/adjusting the code to suit the gems and understanding the input and output of each. In hindsight, I could have created each menu with the gem from the beginning, rather than hard coding the menu options and then later altering to suit the gem requirements. 
 
 ### Flow Chart
 
