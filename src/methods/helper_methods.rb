@@ -71,19 +71,20 @@ def add_colour
 end
 
 
-# def happy_to_continue
-#     puts
-#     yes_no = TTY::Prompt.new.select("Are you happy to proceed with your selections today?") do |menu|
-#         menu.choice("Yes")
-#         menu.choice("No")
-#     end
-# end
+def happy_to_continue
+    puts
+    yes_no = TTY::Prompt.new.select("Are you happy to proceed with your selections today?") do |menu|
+        menu.choice("Yes")
+        menu.choice("No")
+    end
+    return yes_no
+end
 
 #method to take the users order
 def get_order(stock, order, vehicle)
     
     item = stock.select
-
+    
     h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
 
     stock.display_model(h[item])
@@ -91,6 +92,6 @@ def get_order(stock, order, vehicle)
 
     order.add_vehicle(h[item],1)
     
+    #attempt to add optional extras to order
     # e = {"Carbon Wheels" => 1500, "Oak Wood Interior" => 1500, "Self-Driving Capability" => 7000, "Luicrously Fast Mode" => 3000}
-    # extras
 end
