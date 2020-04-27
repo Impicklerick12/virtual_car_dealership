@@ -1,6 +1,6 @@
 require "tty-prompt"
 require_relative "vehicle.rb"
-require_relative "user.rb" #NEEDED?
+require_relative "user.rb"
 require_relative "../methods/helper_methods.rb"
 require_relative "../methods/banners.rb"
 
@@ -27,12 +27,8 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
         ]
 
         model = TTY::Prompt.new.select("Please chose the Testla model you would like to purchase today:", menu, active_color: :red)
-            # menu.choice("Model X")
-            # menu.choice("Model M")
-            # menu.choice("Speedster")
-            # menu.choice("Cybertruck")
-        # end
         clear
+
         return model
     end
 
@@ -45,7 +41,3 @@ class Stock #shows the stock vehicles and add new vehicles to the stock
     end
 
 end
-
-# stock = Stock.new
-# stock.add_item(Speedster.new("Yellow")).add_item(ModelM.new("Red")).add_item(ModelX.new("Black"))
-# puts stock

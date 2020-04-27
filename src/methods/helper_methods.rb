@@ -34,30 +34,6 @@ def return_to_menu
     sleep(1)
 end
 
-#optional extras method, would display TTY-Prompt menu with selectable options
-# def extras
-#     puts
-#     yes_no = TTY::Prompt.new.select("Would you like to add any optional extras?") do |menu|
-#                 menu.choice("Yes")
-#                 menu.choice("No")
-#     end
-#     clear
-
-#     if yes_no == "No"
-#         return
-#     else yes_no == "Yes"
-
-#         extras = TTY::Prompt.new.multi_select("Please chose the Testla extras you would like to add to your purchase today:") do |menu|
-#             menu.choice('Carbon Wheels')
-#             menu.choice('Oak Wood Interior')
-#             menu.choice('Self-Driving Capability')
-#             menu.choice('Ludicrously Fast Mode')
-#         end
-#         return extras
-
-#     end
-# end
-
 #add colour TTY-Prompt menu. Returns the selected colour
 def add_colour
     colour = TTY::Prompt.new.select("Please chose your colour:", active_color: :red) do |menu|
@@ -82,7 +58,6 @@ end
 
 #method to take the users order
 def get_order(stock, order, vehicle)
-    
     item = stock.select
     
     h = {"Model X"=> ModelX.new, "Model M" => ModelM.new, "Speedster" => Speedster.new, "Cybertruck" => Cybertruck.new}
@@ -91,7 +66,4 @@ def get_order(stock, order, vehicle)
     (h[item]).add_colour(add_colour)
 
     order.add_vehicle(h[item],1)
-    
-    #attempt to add optional extras to order
-    # e = {"Carbon Wheels" => 1500, "Oak Wood Interior" => 1500, "Self-Driving Capability" => 7000, "Luicrously Fast Mode" => 3000}
 end

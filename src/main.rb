@@ -59,6 +59,7 @@ continue = true #main loop, until the user choses quit and continue = false
         main_menu_header
         sleep(1)
 
+        #main menu created through tty-prompt. output is a number (1..4) and is compared using the case function
         selection = TTY::Prompt.new.select("What would you like to do today #{user.name}?",  cycle: true, marker: '>', echo: false, active_color: :red) do |menu|
             menu.choice('Start a new order', 1)
             menu.choice('View an existing order', 2)
