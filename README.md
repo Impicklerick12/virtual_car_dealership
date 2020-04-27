@@ -42,6 +42,8 @@ Once the user has finished using the app, they may quit at any time, where a per
 
 The Testla Motors app was designed to create a platform where user input and error is minimised. It was our mission to create a step-by-step process where the user is able to follow along easily simply using the enter and arrow keys. The use of the TTY-Prompt gem allowed us to simplify menu and option screens, minimizing user text input, and showing a visual representation of all options. 
 
+## Help
+
 ### Installation Instructions
 
 1. Firstly, you will need to ensure that ruby is installed on your computer. [Download ruby here](https://www.ruby-lang.org/en/).
